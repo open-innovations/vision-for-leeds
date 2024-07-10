@@ -1,29 +1,31 @@
 ---
-title: Welcome to the OI Lume Template
+title: Vision for Leeds
 ---
 
 <p>
-  You'll need to customise some things to get started:
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
-<ul>
-  <li>
-    Review the contents of <code>_config.ts</code>. Pay particular attention to the site URL, as this will affect how
-    relative links are created. You can probably ignore the rest of this for the moment.
-  </li>
-  <li>
-    The source for the site is held in the <code>src</code> directory.
-  </li>
-  <li>
-    Review the contents of <code>src/_data.yml</code>
-      <ul>
-        <li>This is where the default page layout is defined in the <code>layout</code> key. The default is <code>templates/page.njk</code>. This template can be found in the <code>_includes</code> directory.</li>
-        <li>Select colours for the site header and logo by updating the <code>logo_colour</code> and <code>header_class</code>s. The <a href="https://open-innovations.org/brand/">Open Innovations Brand</a> page will help.</li>
-        <li>Edit the site title and other SEO metadata in under the <code>metas</code> key. See the <a href="https://lume.land/plugins/metas/">Lume metas plugin documentation</a> for more information.</li>
-      </ul>
-  </li>
-  <li>
-    Edit the title of this page in the frontmatter above. You can override the template by setting the
-    <code>layout</code> key.
-  </li>
-</p>
+<h2>Testing data</h2>
+
+
+{{
+	comp.oi.dashboard({
+		config: {
+			data: "dummy_headline",
+			title: "Headline",
+			value: "Value",
+			width: "200px",
+            postfix: "Suffix",
+			panels: [{
+				name: "Data 1"
+			},{
+				name: "Data 2"
+			},{
+				name: "Data 3"
+			},{
+				name: "Data 4"
+			}]
+		}
+	}) | safe
+}}
